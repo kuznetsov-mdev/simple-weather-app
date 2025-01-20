@@ -11,5 +11,7 @@ repositories {
 dependencies {
     implementation(libs.agp)
     implementation(libs.kotlin.gradle.plugin)
+    implementation(libs.gradleplugin.compose)
+    implementation(libs.gradleplugin.composeCompiler)
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
