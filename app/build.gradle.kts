@@ -3,7 +3,6 @@ plugins {
 }
 
 android {
-
     defaultConfig {
         applicationId = "ru.sandbox.swa"
         targetSdk = 35
@@ -12,4 +11,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+}
+
+dependencies {
+    implementation(projects.theme)
 }

@@ -1,5 +1,6 @@
 rootProject.name = "SimpleWeatherApp"
 include(":app")
+include(":theme")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
@@ -26,5 +27,3 @@ dependencyResolutionManagement {
     }
 }
 
-
- 
