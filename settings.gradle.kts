@@ -1,3 +1,8 @@
+rootProject.name = "SimpleWeatherApp"
+include(":app")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     pluginManagement {
         includeBuild("build-logic")
@@ -22,6 +27,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SimpleWeatherApp"
-include(":app")
+
  
