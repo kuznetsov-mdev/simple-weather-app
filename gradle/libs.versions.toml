@@ -1,7 +1,7 @@
 [versions]
 agp = "8.7.3"
 kotlin = "2.1.0"
-compoes = "1.6.10"
+compose = "1.6.10"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -14,8 +14,8 @@ composeBom = "2025.01.00"
 agp = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
-gradleplugin-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compoes" }
-gradleplugin-composeCompiler = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "compoes" }
+gradleplugin-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
+gradleplugin-composeCompiler = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "compose" }
 
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
