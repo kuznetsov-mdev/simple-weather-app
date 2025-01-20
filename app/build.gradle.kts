@@ -3,7 +3,6 @@ plugins {
 }
 
 android {
-
     defaultConfig {
         applicationId = "ru.sandbox.swa"
         targetSdk = 35
