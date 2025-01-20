@@ -13,3 +13,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 }
+
+dependencies {
+    implementation(projects.theme)
+}
