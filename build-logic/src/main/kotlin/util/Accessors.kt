@@ -1,6 +1,5 @@
 package util
 
-import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.LibraryExtension
 import org.gradle.accessors.dm.LibrariesForLibs
 import org.gradle.api.Action
@@ -13,5 +12,5 @@ internal fun Project.android(configure: Action<LibraryExtension>): Unit =
 internal val Project.libs: LibrariesForLibs
     get() = (this as ExtensionAware).extensions.getByName("libs") as LibrariesForLibs
 
-internal fun BaseExtension.kotlinOptions(configure: Action<org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions>): Unit =
-    (this as ExtensionAware).extensions.configure("kotlinOptions", configure)
+fun Project.`kotlin`(configure: Action<org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension>): Unit =
+    (this as ExtensionAware).extensions.configure("kotlin", configure)
