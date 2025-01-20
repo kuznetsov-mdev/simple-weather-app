@@ -27,4 +27,4 @@ dependencyResolutionManagement {
 }
 
 
- 
+include(":theme")
