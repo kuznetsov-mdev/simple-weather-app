@@ -1,7 +1,7 @@
 
 import AndroidConst.JAVA_VERSION
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
-import util.baseAndroidConfig
+import util.baseConfig
 import util.libs
 
 plugins {
@@ -11,7 +11,7 @@ plugins {
 }
 
 configure<BaseAppModuleExtension> {
-    baseAndroidConfig()
+    baseConfig()
 
     buildFeatures {
         compose = true
