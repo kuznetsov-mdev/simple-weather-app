@@ -12,5 +12,5 @@ internal fun Project.android(configure: Action<LibraryExtension>): Unit =
 internal val Project.libs: LibrariesForLibs
     get() = (this as ExtensionAware).extensions.getByName("libs") as LibrariesForLibs
 
-fun Project.`kotlin`(configure: Action<org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension>): Unit =
+fun Project.kotlin(configure: Action<org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension>): Unit =
     (this as ExtensionAware).extensions.configure("kotlin", configure)

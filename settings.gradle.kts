@@ -1,6 +1,7 @@
 rootProject.name = "SimpleWeatherApp"
 include(":app")
 include(":theme")
+include(":domain")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
@@ -26,5 +27,3 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-include(":domain")
