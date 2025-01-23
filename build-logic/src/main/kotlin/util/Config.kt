@@ -1,13 +1,17 @@
 package util
 
+import AndroidConst
 import com.android.build.gradle.BaseExtension
 
-fun BaseExtension.baseAndroidConfig() {
+
+
+fun BaseExtension.baseConfig() {
     namespace = AndroidConst.NAMESPACE
     setCompileSdkVersion(AndroidConst.COMPILE_SKD)
 
     defaultConfig{
         minSdk = AndroidConst.MIN_SKD
+        targetSdk = AndroidConst.TARGET_SDK
 
         vectorDrawables {
             useSupportLibrary = true
@@ -25,5 +29,4 @@ fun BaseExtension.baseAndroidConfig() {
         sourceCompatibility = AndroidConst.COMPILE_JDK_VERSION
         targetCompatibility = AndroidConst.COMPILE_JDK_VERSION
     }
-
 }

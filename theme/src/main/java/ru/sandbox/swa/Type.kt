@@ -1,9 +1,10 @@
+package ru.sandbox.swa
+
 import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.LineHeightStyle
-import ru.sandbox.swa.theme.R
 
 private val poppins = FontFamily(
     Font(R.font.poppins_regular),
