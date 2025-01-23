@@ -5,6 +5,10 @@ plugins {
     id("org.jetbrains.kotlin.jvm")
 }
 
+kotlin {
+    jvmToolchain(AndroidConst.JAVA_VERSION)
+}
+
 java {
     sourceCompatibility = COMPILE_JDK_VERSION
     targetCompatibility = COMPILE_JDK_VERSION
