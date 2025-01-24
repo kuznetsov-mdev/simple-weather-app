@@ -16,9 +16,10 @@ object SimpleWeatherHttpClient {
         .addInterceptor(loggingInterceptor)
         .build()
 
-    val retrofit: Retrofit = Retrofit.Builder()
+    val openWeatherApi: OpenWeatherApi = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(httpClient)
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
+        .create(OpenWeatherApi::class.java)
 }
