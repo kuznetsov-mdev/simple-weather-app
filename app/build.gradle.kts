@@ -1,5 +1,6 @@
 plugins {
     id("android-app-convention")
+    alias(libs.plugins.google.secret)
 }
 
 android {
