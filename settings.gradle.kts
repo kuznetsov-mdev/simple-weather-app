@@ -28,4 +28,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+include(":network")
 

@@ -12,6 +12,11 @@ composeBom = "2025.01.00"
 appcompat = "1.7.0"
 material = "1.12.0"
 coroutines = "1.10.1"
+ksp = "2.1.0-1.0.29"
+serialization-lib = "1.8.0"
+moshi = "1.15.2"
+retrofit = "2.11.0"
+logging = "4.12.0"
 
 [libraries]
 agp = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -42,14 +47,23 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 #Coroutines
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
-
-
+#Serrialization
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization-lib" }
+#Moshi
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi-moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-codegen-ksp = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+#Retrofit
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "logging" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+google-secret = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version = "2.0.1" }
