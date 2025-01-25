@@ -2,6 +2,7 @@ rootProject.name = "SimpleWeatherApp"
 include(":app")
 include(":theme")
 include(":domain")
+include(":data")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
@@ -28,3 +29,4 @@ dependencyResolutionManagement {
     }
 }
 include(":network")
+
