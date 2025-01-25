@@ -6,7 +6,7 @@ import ru.sandbox.swa.model.CityItem
 class GetSearchHistoryUseCase(
     private val cityRepository: CityRepository
 ) {
-    suspend operator fun invoke(): List<CityItem> {
-        return cityRepository.getSearchHistory()
+    suspend operator fun invoke(apiKey: String): List<CityItem> {
+        return cityRepository.getSearchHistory(apiKey)
     }
 }
