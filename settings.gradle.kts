@@ -3,6 +3,8 @@ include(":app")
 include(":theme")
 include(":domain")
 include(":data")
+include(":core:network")
+include(":core:storage")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
@@ -28,5 +30,3 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-include(":network")
-
