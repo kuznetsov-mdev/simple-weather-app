@@ -1,3 +1,3 @@
 plugins {
-    id("jvm-convention")
+    id("android-lib-convention")
 }
