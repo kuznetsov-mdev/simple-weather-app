@@ -10,7 +10,7 @@ import ru.sandbox.swa.contract.CityContract
 @Entity(tableName = CityContract.TABLE_NAME)
 data class CityEntity(
     @PrimaryKey(autoGenerate = false)
-    @ColumnInfo(name = CityContract.Column.ID)
+    @ColumnInfo(name = CityContract.Column.ID, index = true)
     val id: String,
     @ColumnInfo(name = CityContract.Column.COUNTRY)
     val country: String,

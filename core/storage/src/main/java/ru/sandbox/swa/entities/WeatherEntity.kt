@@ -19,7 +19,7 @@ import ru.sandbox.swa.contract.WeatherContract
 )
 data class WeatherEntity(
     @PrimaryKey
-    @ColumnInfo(name = WeatherContract.Column.ID)
+    @ColumnInfo(name = WeatherContract.Column.ID, index = true)
     val id: Int,
     @ColumnInfo(name = WeatherContract.Column.DATE)
     val date: Int,
