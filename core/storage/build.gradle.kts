@@ -1,6 +1,7 @@
 plugins {
     id("android-lib-convention")
     alias(libs.plugins.devtools.ksp)
+    alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.serialization)
 }
 
@@ -12,7 +13,6 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     //Hilt
-    implementation(libs.dagger.compiler)
-    implementation(libs.hilt.compiler)
     implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 }
