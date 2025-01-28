@@ -11,4 +11,8 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
+    //Hilt
+    implementation(libs.dagger.compiler)
+    implementation(libs.hilt.compiler)
+    implementation(libs.hilt.android)
 }
