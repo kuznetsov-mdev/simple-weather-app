@@ -5,6 +5,7 @@ include(":domain")
 include(":data")
 include(":core:network")
 include(":core:storage")
+include(":core:service")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
