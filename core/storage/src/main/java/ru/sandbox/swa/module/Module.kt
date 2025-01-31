@@ -6,7 +6,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import ru.sandbox.swa.WeatherForecastDatabase
+import ru.sandbox.swa.WeatherForecastRoomDatabase
 import ru.sandbox.swa.dao.CityDao
 import ru.sandbox.swa.dao.WeatherDao
 import javax.inject.Singleton
@@ -17,19 +17,19 @@ class Module {
 
     @Provides
     @Singleton
-    fun providesWeatherForecastDataBase(appContext: Application): WeatherForecastDatabase {
+    fun providesWeatherForecastDataBase(appContext: Application): WeatherForecastRoomDatabase {
         return Room.databaseBuilder(
             context = appContext,
-            klass = WeatherForecastDatabase::class.java,
-            name = WeatherForecastDatabase.DB_NAME
+            klass = WeatherForecastRoomDatabase::class.java,
+            name = WeatherForecastRoomDatabase.DB_NAME
         ).build()
     }
 
     @Provides
     @Singleton
-    fun providesCityDao(db: WeatherForecastDatabase): CityDao = db.cityDao()
+    fun providesCityDao(db: WeatherForecastRoomDatabase): CityDao = db.cityDao()
 
     @Provides
     @Singleton
-    fun providesWeatherDao(db: WeatherForecastDatabase): WeatherDao = db.weatherDao()
+    fun providesWeatherDao(db: WeatherForecastRoomDatabase): WeatherDao = db.weatherDao()
 }
