@@ -1,6 +1,7 @@
 plugins {
-    id("jvm-convention")
+    id("android-lib-convention")
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt)
     alias(libs.plugins.devtools.ksp)
 }
 
@@ -16,4 +17,7 @@ dependencies {
     //Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
+    //Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 }
