@@ -2,6 +2,7 @@ package ru.sandbox.swa
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.withTransaction
 import ru.sandbox.swa.WeatherForecastRoomDatabase.Companion.DB_VERSION
 import ru.sandbox.swa.dao.CityDao
 import ru.sandbox.swa.dao.WeatherDao
@@ -20,6 +21,13 @@ abstract class WeatherForecastRoomDatabase : RoomDatabase(), WeatherForecastData
     abstract override fun cityDao(): CityDao
 
     abstract override fun weatherDao(): WeatherDao
+
+    override suspend fun saveWeatherForecast(cityEntity: CityEntity, weather: List<WeatherEntity>) {
+        withTransaction {
+            cityDao().insert(cityEntity)
+            weatherDao().insert(weather)
+        }
+    }
 
     companion object {
         const val DB_NAME = "weather_forecast_db"
