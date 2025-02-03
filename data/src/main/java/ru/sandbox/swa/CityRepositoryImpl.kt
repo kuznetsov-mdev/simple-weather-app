@@ -3,6 +3,7 @@ package ru.sandbox.swa
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 import ru.sandbox.swa.api.CityRepository
+import ru.sandbox.swa.db.WeatherForecastDatabase
 import ru.sandbox.swa.mapper.toCityItem
 import ru.sandbox.swa.model.CityItem
 import javax.inject.Inject

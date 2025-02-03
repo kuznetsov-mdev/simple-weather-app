@@ -6,10 +6,10 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import ru.sandbox.swa.WeatherForecastDatabase
-import ru.sandbox.swa.WeatherForecastRoomDatabase
-import ru.sandbox.swa.dao.CityDao
-import ru.sandbox.swa.dao.WeatherDao
+import ru.sandbox.swa.db.WeatherForecastDatabase
+import ru.sandbox.swa.db.WeatherForecastRoomDatabase
+import ru.sandbox.swa.db.dao.CityDao
+import ru.sandbox.swa.db.dao.WeatherDao
 import javax.inject.Singleton
 
 @Module
