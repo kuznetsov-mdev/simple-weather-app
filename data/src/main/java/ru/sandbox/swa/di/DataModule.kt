@@ -7,10 +7,10 @@ import dagger.hilt.components.SingletonComponent
 import ru.sandbox.swa.CityRepositoryImpl
 import ru.sandbox.swa.NetworkConnectivityService
 import ru.sandbox.swa.OpenWeatherApi
-import ru.sandbox.swa.WeatherForecastDatabase
 import ru.sandbox.swa.WeatherRepositoryImpl
 import ru.sandbox.swa.api.CityRepository
 import ru.sandbox.swa.api.WeatherRepository
+import ru.sandbox.swa.db.WeatherForecastDatabase
 import javax.inject.Singleton
 
 @Module

@@ -1,11 +1,11 @@
-package ru.sandbox.swa.dao
+package ru.sandbox.swa.db.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import ru.sandbox.swa.contract.WeatherContract
-import ru.sandbox.swa.entities.WeatherEntity
+import ru.sandbox.swa.db.contract.WeatherContract
+import ru.sandbox.swa.db.entities.WeatherEntity
 
 @Dao
 interface WeatherDao {

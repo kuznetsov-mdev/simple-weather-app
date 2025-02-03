@@ -1,4 +1,4 @@
-package ru.sandbox.swa.contract
+package ru.sandbox.swa.db.contract
 
 object WeatherContract {
     const val TABLE_NAME = "weather_forecast"

@@ -1,11 +1,11 @@
-package ru.sandbox.swa.dao
+package ru.sandbox.swa.db.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import ru.sandbox.swa.contract.CityContract
-import ru.sandbox.swa.entities.CityEntity
+import ru.sandbox.swa.db.contract.CityContract
+import ru.sandbox.swa.db.entities.CityEntity
 
 @Dao
 interface CityDao {

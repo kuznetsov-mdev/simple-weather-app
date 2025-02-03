@@ -1,10 +1,10 @@
-package ru.sandbox.swa.entities
+package ru.sandbox.swa.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.serialization.Serializable
-import ru.sandbox.swa.contract.CityContract
+import ru.sandbox.swa.db.contract.CityContract
 
 @Serializable
 @Entity(tableName = CityContract.TABLE_NAME)
