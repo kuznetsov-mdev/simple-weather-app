@@ -5,7 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import ru.sandbox.swa.db.contract.CityContract
-import ru.sandbox.swa.db.entities.CityEntity
+import ru.sandbox.swa.entities.CityEntity
 
 @Dao
 interface CityDao {
