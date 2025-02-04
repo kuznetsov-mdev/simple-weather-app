@@ -1,9 +1,9 @@
 package ru.sandbox.swa.mapper
 
 import WeatherDto
-import ru.sandbox.swa.db.entities.CityEntity
-import ru.sandbox.swa.db.entities.WeatherEntity
 import ru.sandbox.swa.dto.CityDto
+import ru.sandbox.swa.entities.CityEntity
+import ru.sandbox.swa.entities.WeatherEntity
 import ru.sandbox.swa.model.CityItem
 import ru.sandbox.swa.model.WeatherItem
 

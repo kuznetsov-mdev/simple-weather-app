@@ -5,7 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import ru.sandbox.swa.db.contract.WeatherContract
-import ru.sandbox.swa.db.entities.WeatherEntity
+import ru.sandbox.swa.entities.WeatherEntity
 
 @Dao
 interface WeatherDao {

@@ -1,4 +1,4 @@
-package ru.sandbox.swa.db.entities
+package ru.sandbox.swa.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

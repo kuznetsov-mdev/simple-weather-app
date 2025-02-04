@@ -2,8 +2,8 @@ package ru.sandbox.swa.db
 
 import ru.sandbox.swa.db.dao.CityDao
 import ru.sandbox.swa.db.dao.WeatherDao
-import ru.sandbox.swa.db.entities.CityEntity
-import ru.sandbox.swa.db.entities.WeatherEntity
+import ru.sandbox.swa.entities.CityEntity
+import ru.sandbox.swa.entities.WeatherEntity
 
 interface WeatherForecastDatabase {
 
