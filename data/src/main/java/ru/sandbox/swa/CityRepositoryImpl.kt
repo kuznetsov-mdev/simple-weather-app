@@ -1,17 +1,21 @@
 package ru.sandbox.swa
 
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.flow.map
 import ru.sandbox.swa.api.CityRepository
 import ru.sandbox.swa.db.WeatherForecastDatabase
+import ru.sandbox.swa.entities.CityEntity
+import ru.sandbox.swa.mapper.toCityEntity
 import ru.sandbox.swa.mapper.toCityItem
 import ru.sandbox.swa.model.CityItem
+import ru.sandbox.swa.proto.ProtoDataStore
 import javax.inject.Inject
 
 class CityRepositoryImpl @Inject constructor(
     private val openWeatherApi: OpenWeatherApi,
     private val weatherForecastDatabase: WeatherForecastDatabase,
     private val connectivityService: NetworkConnectivityService,
+    private val protoDataStore: ProtoDataStore<CityEntity>
 ) : CityRepository {
 
     override suspend fun getSearchHistory(apiKey: String): List<CityItem> {
@@ -26,12 +30,12 @@ class CityRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun saveCityToSearchHistory(cityModel: CityItem, apiKey: String) {
-        //Need realization of DataStore in storage package
+    //Todo: remove api key from repository api
+    override suspend fun saveCityToSearchHistory(cityModel: CityItem) {
+        protoDataStore.saveEntity(cityModel.toCityEntity())
     }
 
-    override suspend fun getLastSearchedCity(apiKey: String): Flow<CityItem?> {
-        //Need realization of DataStore in storage package
-        return emptyFlow()
+    override suspend fun getLastSearchedCity(): Flow<CityItem?> {
+        return protoDataStore.getEntity().map { it?.toCityItem() }
     }
 }
