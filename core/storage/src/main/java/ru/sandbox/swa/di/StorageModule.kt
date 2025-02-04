@@ -10,6 +10,9 @@ import ru.sandbox.swa.db.WeatherForecastDatabase
 import ru.sandbox.swa.db.WeatherForecastRoomDatabase
 import ru.sandbox.swa.db.dao.CityDao
 import ru.sandbox.swa.db.dao.WeatherDao
+import ru.sandbox.swa.entities.CityEntity
+import ru.sandbox.swa.proto.CityProtoDataStoreImpl
+import ru.sandbox.swa.proto.ProtoDataStore
 import javax.inject.Singleton
 
 @Module
@@ -33,4 +36,10 @@ class StorageModule {
     @Provides
     @Singleton
     fun providesWeatherDao(db: WeatherForecastDatabase): WeatherDao = db.weatherDao()
+
+    @Provides
+    @Singleton
+    fun providesCityProtoDatastore(context: Application): ProtoDataStore<CityEntity> =
+        CityProtoDataStoreImpl(context)
+
 }
