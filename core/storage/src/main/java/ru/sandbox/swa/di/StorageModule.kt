@@ -6,10 +6,13 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import ru.sandbox.swa.WeatherForecastDatabase
-import ru.sandbox.swa.WeatherForecastRoomDatabase
-import ru.sandbox.swa.dao.CityDao
-import ru.sandbox.swa.dao.WeatherDao
+import ru.sandbox.swa.db.WeatherForecastDatabase
+import ru.sandbox.swa.db.WeatherForecastRoomDatabase
+import ru.sandbox.swa.db.dao.CityDao
+import ru.sandbox.swa.db.dao.WeatherDao
+import ru.sandbox.swa.entities.CityEntity
+import ru.sandbox.swa.proto.CityProtoDataStoreImpl
+import ru.sandbox.swa.proto.ProtoDataStore
 import javax.inject.Singleton
 
 @Module
@@ -33,4 +36,10 @@ class StorageModule {
     @Provides
     @Singleton
     fun providesWeatherDao(db: WeatherForecastDatabase): WeatherDao = db.weatherDao()
+
+    @Provides
+    @Singleton
+    fun providesCityProtoDatastore(context: Application): ProtoDataStore<CityEntity> =
+        CityProtoDataStoreImpl(context)
+
 }

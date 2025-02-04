@@ -1,7 +1,7 @@
-package ru.sandbox.swa
+package ru.sandbox.swa.db
 
-import ru.sandbox.swa.dao.CityDao
-import ru.sandbox.swa.dao.WeatherDao
+import ru.sandbox.swa.db.dao.CityDao
+import ru.sandbox.swa.db.dao.WeatherDao
 import ru.sandbox.swa.entities.CityEntity
 import ru.sandbox.swa.entities.WeatherEntity
 

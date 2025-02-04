@@ -1,6 +1,7 @@
 package ru.sandbox.swa
 
 import ru.sandbox.swa.api.WeatherRepository
+import ru.sandbox.swa.db.WeatherForecastDatabase
 import ru.sandbox.swa.mapper.toCityEntity
 import ru.sandbox.swa.mapper.toWeatherEntity
 import ru.sandbox.swa.mapper.toWeatherItem

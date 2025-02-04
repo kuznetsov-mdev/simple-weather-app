@@ -1,4 +1,4 @@
-package ru.sandbox.swa.contract
+package ru.sandbox.swa.db.contract
 
 object CityContract {
     const val TABLE_NAME = "cities"

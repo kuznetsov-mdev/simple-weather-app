@@ -4,8 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-import ru.sandbox.swa.contract.CityContract
-import ru.sandbox.swa.contract.WeatherContract
+import ru.sandbox.swa.db.contract.CityContract
+import ru.sandbox.swa.db.contract.WeatherContract
 
 @Entity(
     tableName = WeatherContract.TABLE_NAME,
