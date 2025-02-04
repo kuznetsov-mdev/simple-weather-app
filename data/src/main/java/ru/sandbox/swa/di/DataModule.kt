@@ -11,6 +11,8 @@ import ru.sandbox.swa.WeatherRepositoryImpl
 import ru.sandbox.swa.api.CityRepository
 import ru.sandbox.swa.api.WeatherRepository
 import ru.sandbox.swa.db.WeatherForecastDatabase
+import ru.sandbox.swa.entities.CityEntity
+import ru.sandbox.swa.proto.ProtoDataStore
 import javax.inject.Singleton
 
 @Module
@@ -31,7 +33,8 @@ class DataModule {
     fun providesCityRepository(
         openWeatherApi: OpenWeatherApi,
         weatherForecastDatabase: WeatherForecastDatabase,
-        connectivityService: NetworkConnectivityService
+        connectivityService: NetworkConnectivityService,
+        protoDataStore: ProtoDataStore<CityEntity>
     ): CityRepository =
-        CityRepositoryImpl(openWeatherApi, weatherForecastDatabase, connectivityService)
+        CityRepositoryImpl(openWeatherApi, weatherForecastDatabase, connectivityService, protoDataStore)
 }
