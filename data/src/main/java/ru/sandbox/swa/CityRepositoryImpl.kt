@@ -30,7 +30,6 @@ class CityRepositoryImpl @Inject constructor(
         }
     }
 
-    //Todo: remove api key from repository api
     override suspend fun saveCityToSearchHistory(cityModel: CityItem) {
         protoDataStore.saveEntity(cityModel.toCityEntity())
     }
