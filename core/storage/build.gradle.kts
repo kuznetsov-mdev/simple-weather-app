@@ -15,4 +15,6 @@ dependencies {
     //Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    //ProtoDataStore
+    implementation(libs.androidx.datastore)
 }

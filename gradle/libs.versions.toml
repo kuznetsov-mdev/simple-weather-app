@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.3"
+datastore = "1.1.2"
 kotlin = "2.1.0"
 compose = "1.6.10"
 coreKtx = "1.15.0"
@@ -22,6 +23,7 @@ hilt = "2.54"
 
 [libraries]
 agp = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+androidx-datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
 gradleplugin-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
