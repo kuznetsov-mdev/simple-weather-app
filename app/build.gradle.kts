@@ -15,4 +15,5 @@ android {
 
 dependencies {
     implementation(projects.theme)
+    implementation(libs.timber)
 }
