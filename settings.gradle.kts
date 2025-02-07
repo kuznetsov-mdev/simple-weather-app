@@ -1,5 +1,6 @@
 rootProject.name = "SimpleWeatherApp"
 include(":app")
+include(":presentation")
 include(":theme")
 include(":domain")
 include(":data")
