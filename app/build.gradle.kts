@@ -17,6 +17,7 @@ android {
 
 dependencies {
     implementation(projects.theme)
+    implementation(projects.presentation)
     implementation(libs.timber)
 
     //Hilt
