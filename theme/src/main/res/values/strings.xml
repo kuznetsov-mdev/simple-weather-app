@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PresentationPatterns</string>
+    <string name="search">Search</string>
+    <string name="cities">Cities</string>
+    <string name="search_label">Input city</string>
+    <string name="search_placeholder">e.g. Moscow</string>
+    <string name="offline_mode">offline mode</string>
+    <string name="no_value_present">no value present</string>
+</resources>

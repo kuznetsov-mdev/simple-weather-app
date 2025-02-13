@@ -1,6 +1,8 @@
 plugins {
     id("android-app-convention")
     alias(libs.plugins.google.secret)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.devtools.ksp)
 }
 
 android {
@@ -15,4 +17,10 @@ android {
 
 dependencies {
     implementation(projects.theme)
+    implementation(projects.presentation)
+    implementation(libs.timber)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 }

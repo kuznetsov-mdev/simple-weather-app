@@ -1,5 +1,4 @@
 import AndroidConst.COMPILE_JDK_VERSION
-import gradle.kotlin.dsl.accessors._f2f731efb6df09b1e7770b63a45cad96.implementation
 import util.baseConfig
 import util.libs
 
