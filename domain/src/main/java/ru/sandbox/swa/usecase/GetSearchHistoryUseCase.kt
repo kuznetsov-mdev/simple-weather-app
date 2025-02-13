@@ -7,7 +7,7 @@ import javax.inject.Inject
 class GetSearchHistoryUseCase @Inject constructor(
     private val cityRepository: CityRepository
 ) {
-    suspend operator fun invoke(apiKey: String): List<CityItem> {
-        return cityRepository.getSearchHistory(apiKey)
+    suspend operator fun invoke(): List<CityItem> {
+        return cityRepository.getSearchHistory()
     }
 }
