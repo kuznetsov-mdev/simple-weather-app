@@ -4,10 +4,10 @@ import ru.sandbox.swa.api.CityRepository
 import ru.sandbox.swa.model.CityItem
 import javax.inject.Inject
 
-class GetSearchHistoryUseCase @Inject constructor(
+class SaveCityToSearchHistoryUseCase @Inject constructor(
     private val cityRepository: CityRepository
 ) {
-    suspend operator fun invoke(apiKey: String): List<CityItem> {
-        return cityRepository.getSearchHistory(apiKey)
+    suspend operator fun invoke(cityItem: CityItem) {
+        cityRepository.saveCityToSearchHistory(cityItem)
     }
 }
