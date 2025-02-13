@@ -5,7 +5,7 @@ import ru.sandbox.swa.model.CityItem
 
 interface CityRepository {
 
-    suspend fun getSearchHistory(apiKey: String): List<CityItem>
+    suspend fun getSearchHistory(): List<CityItem>
 
     suspend fun getCitiesByName(query: String, count: Int, apiKey: String): List<CityItem>
 
