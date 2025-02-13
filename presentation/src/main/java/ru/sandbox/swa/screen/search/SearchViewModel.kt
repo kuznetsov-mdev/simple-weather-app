@@ -21,6 +21,7 @@ import kotlinx.coroutines.launch
 import ru.sandbox.swa.model.CityItem
 import ru.sandbox.swa.usecase.GetCitiesUseCase
 import ru.sandbox.swa.usecase.GetLastSearchedCityUseCase
+import ru.sandbox.swa.usecase.SaveCityToSearchHistoryUseCase
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -29,7 +30,8 @@ class SearchViewModel @Inject constructor(
     @Named("openWeatherApiKey")
     private val apiKey: String,
     private val searchCityUseCase: GetCitiesUseCase,
-    private val getLastSearchedCityUseCase: GetLastSearchedCityUseCase
+    private val getLastSearchedCityUseCase: GetLastSearchedCityUseCase,
+    private val saveCityToSearchHistoryUseCase: SaveCityToSearchHistoryUseCase
 ) : ViewModel() {
 
     private val _searchQuery = MutableStateFlow("")
@@ -62,7 +64,7 @@ class SearchViewModel @Inject constructor(
 
     fun saveSearchHistory(cityModel: CityItem) {
         viewModelScope.launch(Dispatchers.IO) {
-//            saveCityToSearchHistoryUseCase(cityModel)
+            saveCityToSearchHistoryUseCase(cityModel)
         }
     }
 
