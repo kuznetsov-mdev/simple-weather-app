@@ -18,7 +18,7 @@ class CityRepositoryImpl @Inject constructor(
     private val protoDataStore: ProtoDataStore<CityEntity>
 ) : CityRepository {
 
-    override suspend fun getSearchHistory(apiKey: String): List<CityItem> {
+    override suspend fun getSearchHistory(): List<CityItem> {
         return weatherForecastDatabase.cityDao().getAll().map { it.toCityItem() }
     }
 
