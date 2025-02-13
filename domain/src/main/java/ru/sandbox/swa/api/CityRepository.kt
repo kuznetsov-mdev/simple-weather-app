@@ -7,7 +7,7 @@ interface CityRepository {
 
     suspend fun getSearchHistory(): List<CityItem>
 
-    suspend fun getCitiesByName(query: String, count: Int): List<CityItem>
+    suspend fun getCitiesByName(query: String, count: Int, apiKey: String): List<CityItem>
 
     suspend fun saveCityToSearchHistory(cityModel: CityItem)
 
