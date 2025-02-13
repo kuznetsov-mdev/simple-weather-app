@@ -68,7 +68,7 @@ class SearchViewModel @Inject constructor(
 
     fun getLastSearchedCity() {
         viewModelScope.launch(Dispatchers.IO) {
-            getLastSearchedCityUseCase(apiKey).collectLatest {
+            getLastSearchedCityUseCase().collectLatest {
                 _searchHistory.value = it
             }
         }
