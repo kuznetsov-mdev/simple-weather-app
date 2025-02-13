@@ -6,7 +6,7 @@ import ru.sandbox.swa.model.CityItem
 class GetCitiesUseCase(
     private val cityRepository: CityRepository
 ) {
-    suspend operator fun invoke(query: String, count: Int): List<CityItem> {
-        return cityRepository.getCitiesByName(query, count)
+    suspend operator fun invoke(query: String, count: Int, apiKey: String): List<CityItem> {
+        return cityRepository.getCitiesByName(query, count, apiKey)
     }
 }
