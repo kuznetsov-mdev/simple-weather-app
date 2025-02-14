@@ -5,6 +5,10 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+android {
+    namespace = "ru.sandbox.swa.core.storage"
+}
+
 dependencies {
     //Kotlinx serialization
     implementation(libs.kotlinx.serialization.json)

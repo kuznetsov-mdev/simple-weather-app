@@ -22,8 +22,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import ru.sandbox.swa.R
 import ru.sandbox.swa.navigation.ScreensRoutes
+import ru.sandbox.swa.presentation.R
 import ru.sandbox.swa.screen.common.NoValuePresent
 
 @Composable

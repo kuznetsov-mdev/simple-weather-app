@@ -3,6 +3,10 @@ plugins {
     alias(libs.plugins.devtools.ksp)
 }
 
+android {
+    namespace = "ru.sandbox.swa.core.service"
+}
+
 dependencies {
     implementation(projects.domain)
     //Coroutines

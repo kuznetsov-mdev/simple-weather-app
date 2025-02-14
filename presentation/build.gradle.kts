@@ -4,6 +4,10 @@ plugins {
     alias(libs.plugins.devtools.ksp)
 }
 
+android {
+    namespace = "ru.sandbox.swa.presentation"
+}
+
 dependencies {
     implementation(projects.domain)
     implementation(projects.theme)

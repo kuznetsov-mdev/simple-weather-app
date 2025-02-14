@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace = "ru.sandbox.swa"
     defaultConfig {
         applicationId = "ru.sandbox.swa"
         versionCode = 1
@@ -18,9 +19,9 @@ android {
 dependencies {
     implementation(projects.theme)
     implementation(projects.presentation)
-    implementation(libs.timber)
 
     //Hilt
     implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
     ksp(libs.hilt.compiler)
 }

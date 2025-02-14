@@ -2,7 +2,10 @@ plugins {
     id("android-lib-convention")
     alias(libs.plugins.hilt)
     alias(libs.plugins.devtools.ksp)
+}
 
+android {
+    namespace = "ru.sandbox.swa.data"
 }
 
 dependencies {
