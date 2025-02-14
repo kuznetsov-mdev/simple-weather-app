@@ -14,11 +14,24 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/gradle/incremental.annotation.processors"
+
+        }
+    }
 }
 
 dependencies {
     implementation(projects.theme)
     implementation(projects.presentation)
+    implementation(projects.domain)
+    implementation(projects.data)
+    implementation(projects.core.service)
+    implementation(projects.core.storage)
+    implementation(projects.core.network)
 
     //Hilt
     implementation(libs.hilt.android)
