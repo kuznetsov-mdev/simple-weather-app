@@ -6,6 +6,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import ru.sandbox.swa.db.MIGRATION_1_2
 import ru.sandbox.swa.db.WeatherForecastDatabase
 import ru.sandbox.swa.db.WeatherForecastRoomDatabase
 import ru.sandbox.swa.db.dao.CityDao
@@ -26,7 +27,9 @@ class StorageModule {
             context = appContext,
             klass = WeatherForecastRoomDatabase::class.java,
             name = WeatherForecastRoomDatabase.DB_NAME
-        ).build()
+        )
+            .addMigrations(MIGRATION_1_2)
+            .build()
     }
 
     @Provides

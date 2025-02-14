@@ -31,6 +31,6 @@ abstract class WeatherForecastRoomDatabase : RoomDatabase(), WeatherForecastData
 
     companion object {
         const val DB_NAME = "weather_forecast_db"
-        const val DB_VERSION = 1
+        const val DB_VERSION = 2
     }
 }
