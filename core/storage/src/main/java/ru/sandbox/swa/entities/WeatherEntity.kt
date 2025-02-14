@@ -3,12 +3,15 @@ package ru.sandbox.swa.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
 import ru.sandbox.swa.db.contract.CityContract
 import ru.sandbox.swa.db.contract.WeatherContract
 
 @Entity(
     tableName = WeatherContract.TABLE_NAME,
+    primaryKeys = [
+        WeatherContract.Column.ID,
+        WeatherContract.Column.CITY_ID
+    ],
     foreignKeys = [
         ForeignKey(
             entity = CityEntity::class,
@@ -18,7 +21,6 @@ import ru.sandbox.swa.db.contract.WeatherContract
     ]
 )
 data class WeatherEntity(
-    @PrimaryKey
     @ColumnInfo(name = WeatherContract.Column.ID, index = true)
     val id: Int,
     @ColumnInfo(name = WeatherContract.Column.DATE)
