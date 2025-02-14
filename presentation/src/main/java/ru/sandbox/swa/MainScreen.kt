@@ -24,6 +24,7 @@ import androidx.navigation.compose.rememberNavController
 import ru.sandbox.swa.api.ConnectivityServiceApi
 import ru.sandbox.swa.navigation.AppBottomBar
 import ru.sandbox.swa.navigation.MainNavGraph
+import ru.sandbox.swa.presentation.R
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
