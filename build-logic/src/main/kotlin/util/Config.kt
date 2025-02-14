@@ -6,7 +6,6 @@ import com.android.build.gradle.BaseExtension
 
 
 fun BaseExtension.baseConfig() {
-    namespace = AndroidConst.NAMESPACE
     setCompileSdkVersion(AndroidConst.COMPILE_SKD)
 
     defaultConfig{

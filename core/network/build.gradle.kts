@@ -5,6 +5,10 @@ plugins {
     alias(libs.plugins.devtools.ksp)
 }
 
+android {
+    namespace = "ru.sandbox.swa.network"
+}
+
 dependencies {
     //Kotlinx serialization
     implementation(libs.kotlinx.serialization.json)
