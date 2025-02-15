@@ -22,9 +22,9 @@ import ru.sandbox.swa.db.contract.WeatherContract
 )
 data class WeatherEntity(
     @ColumnInfo(name = WeatherContract.Column.ID, index = true)
-    val id: Int,
+    val id: Long,
     @ColumnInfo(name = WeatherContract.Column.DATE)
-    val date: Int,
+    val date: Long,
     @ColumnInfo(name = WeatherContract.Column.TEMPERATURE)
     val temperature: Double,
     @ColumnInfo(name = WeatherContract.Column.HUMIDITY)

@@ -6,7 +6,7 @@ data class WeatherDto(
     @Json(name = "clouds")
     val clouds: CloudsDto,
     @Json(name = "dt")
-    val dateTimeMs: Int,
+    val dateTimeMs: Long,
     @Json(name = "dt_txt")
     val date: String,
     @Json(name = "main")
