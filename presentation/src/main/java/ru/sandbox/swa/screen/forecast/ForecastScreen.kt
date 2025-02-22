@@ -20,6 +20,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import ru.sandbox.swa.model.WeatherItem
 import ru.sandbox.swa.screen.common.NoValuePresent
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 @Composable
 fun ForecastScreen(
@@ -85,10 +89,17 @@ fun ShowForecastResult(
             count = forecast.size
         ) {
             val forecastItem = forecast[it]
-            Text(text = "Date: ${forecastItem.date}")
+            Text(text = "Date: ${convertMsToDate(forecastItem.date)}")
             Text(text = "Temp: ${forecastItem.temperature}")
             Text(text = "Humidity: ${forecastItem.humidity}")
             Text(text = "Wind speed: ${forecastItem.windSpeed}")
         }
     }
+}
+
+fun convertMsToDate(ms: Long): String {
+    val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")
+    val instant = Instant.ofEpochSecond(ms)
+    val date = LocalDateTime.ofInstant(instant, ZoneId.systemDefault())
+    return date.format(formatter)
 }
